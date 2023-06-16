@@ -470,6 +470,7 @@ button.hint {
 	pointer-events: none;
 	font-weight: 700;
 }
+
 #overlayClockContainer{
 	margin: 0 auto;
 	background-color: #0000;
@@ -2201,8 +2202,10 @@ div#chatBody a {
 	display: inline-block;
 } */
 
+/* [V3] added a font family to match the squire website */
 h2 {
 	color: white;
+	font-family:montserrat,sans-serif;
 	-webkit-user-select: none;
 	/* Safari */
 	-moz-user-select: none;
