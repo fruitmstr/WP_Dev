@@ -1235,8 +1235,9 @@ button.glyphicon-button.active.focus {
 #subControlButtons {
     display: flex;
     position: absolute;
-    background-color: var(--discord-grey-0);
-    box-shadow: 0px 0px 10px rgba(0,0,0,1);
+    background-color: #60c86a;
+/*  [V2] add a green glow to the controls and changed background color to be sick*/
+    box-shadow: 0px 0px 10px rgb(70 255 0 / 57%);
     pointer-events: auto;
     border: #cccccc22 1px solid;
     border-radius: 10px;
@@ -1600,9 +1601,10 @@ body.darktheme{
     50%  { box-shadow: 0 0 17px #0004; transform: scale(0.99);}
     100% { box-shadow: 0 0 31px #244e1c44; transform: scale(1.0);}
 }
+/* [V2] Monocromize the start button */
 .gowebcam:enabled {
-	background-color: #26e726 !important;
-	background: radial-gradient(#26e726, #2EeF2E);
+	background-color: #60c86a;
+/* 	background: radial-gradient(#26e726, #2EeF2E); */
 	color: black;
 	font-weight: bold !important;
 	box-shadow: 0 0 31px 0px #244e1c44;
@@ -2591,8 +2593,10 @@ img {
 	top: 0;
 	left: 0;
 }
+/* [V2] gives a rounded edge to the button container  */
 .skip-animation .container-inner{
-	display:block;
+/* 	display:block; */
+	border-radius: 15px;
 }
 
 .out-animation {
@@ -2665,6 +2669,14 @@ img {
 .la-phone {
 	color: red;
 	top:0.5;
+}
+
+/*[V2] change icon colors  */
+.la-cog, .la-tv, .la-video, .la-volume-up{
+	color: #60c86a;
+}
+.la-microphone:before{
+	color: #60c86a;
 }
 
 #obsState {
@@ -4965,6 +4977,8 @@ button i {
     border: 1px solid var(--discord-grey-8);
     color: var(--discord-text);
 }
+
+
 .darktheme button:hover {
     filter: brightness(1.05);
 }
@@ -5108,8 +5122,9 @@ input[type='checkbox'], input[type='radio'] {
     background-color: var(--lighttheme-3);
 }
 
+/* [V2] change background color to black */
 .darktheme .container-inner {
-    background-color: var(--discord-grey-7);
+    background-color: #000000;
 }
 
 .container-inner {
