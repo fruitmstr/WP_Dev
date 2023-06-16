@@ -1,1 +1,3 @@
 Search for [Bookmark] for all of my notes/edits to style in the code
+
+#60c86a is the squire color
