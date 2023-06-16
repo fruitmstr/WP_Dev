@@ -7,7 +7,7 @@
     --discord-grey-4: #2e3035;
     --discord-grey-5: #313338;
     --discord-grey-6: #383a40;
-    --discord-grey-7: #404249; /* primary */
+    --discord-grey-7: #404249; /* primary || [Bookmark] this is the default background button color for dark theme */
     --discord-grey-8: #5e6064;
 	
     --discord-text: hsl( 210 calc(1 * 9.1%) 92% /1);
@@ -4845,6 +4845,8 @@ body.darktheme {
 body.darktheme form>label{
 	color: white;
 }
+
+/* text color for dark mode in join page [Bookmark] */
 body.darktheme .column>h2{
 	color: #b6b6b6;
 }
@@ -5090,6 +5092,7 @@ input[type='checkbox'], input[type='radio'] {
     color: var(--discord-grey-8) !important;
 }
 
+/* I think that this is where the background color for the buttons on the join page is determined [Bookmark]  */
 .darktheme .card {
     background-color: var(--discord-grey-7);
 }
