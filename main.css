@@ -1547,6 +1547,7 @@ body {
 	transition: opacity .1s linear;
 	scrollbar-color:#666 #201c29;
 }
+/*   V1   */
 body.darktheme{
 	background-color: var(--dark-background-color);
 }
@@ -2231,6 +2232,7 @@ label {
 	user-select: none;
 }
 
+
 .darktheme .inner:before,
 .darktheme .inner:after {
 	background: var(--discord-text);
@@ -2278,6 +2280,8 @@ label {
 	background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M 13 4 C 11.90625 4 11 4.90625 11 6 L 11 18 C 11 19.09375 11.90625 20 13 20 L 19 20 C 20.09375 20 21 19.09375 21 18 L 21 6 C 21 4.90625 20.09375 4 19 4 Z M 13 6 L 19 6 L 19 18 L 13 18 Z M 7 14 L 7 18 C 7 21.300781 9.699219 24 13 24 L 15 24 L 15 26 L 11 26 L 11 28 L 21 28 L 21 26 L 17 26 L 17 24 L 19 24 C 22.300781 24 25 21.300781 25 18 L 25 14 L 23 14 L 23 18 C 23 20.21875 21.21875 22 19 22 L 13 22 C 10.78125 22 9 20.21875 9 18 L 9 14 Z'/%3E%3C/svg%3E")!important;
 }
 
+
+/* [V1]  color-> "#346f40"*/
 #dropButton{
 	font-size: 2em;
 	display: block;
@@ -2285,7 +2289,7 @@ label {
 	background-color: #5555;
 	border-radius: 30px;
 	cursor:pointer;
-	color: #636363;
+	color: #346f40;
 	padding: 3px;
 	width: 100px;
 }
@@ -4846,9 +4850,10 @@ body.darktheme form>label{
 	color: white;
 }
 
-/* text color for dark mode in join page [Bookmark] */
+/* text color for dark mode in join page [Bookmark]*/
+/*  [V1]  "#b6b6b6" -> "#000000"*/
 body.darktheme .column>h2{
-	color: #b6b6b6;
+	color: #000000;
 }
 body.darktheme .directorsgrid .vidcon > .las {
 	background-color: #424242;
@@ -5093,8 +5098,10 @@ input[type='checkbox'], input[type='radio'] {
 }
 
 /* I think that this is where the background color for the buttons on the join page is determined [Bookmark]  */
+
+/*  [V1] "--discord-grey-7" -> "#60c86a" */
 .darktheme .card {
-    background-color: var(--discord-grey-7);
+    background-color: #60c86a;
 }
 
 .card {
