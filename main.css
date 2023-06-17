@@ -1554,6 +1554,7 @@ body {
 /*   [V1]   */
 body.darktheme{
 	background-color: var(--dark-background-color);
+	color: white;
 }
 
 ::-webkit-scrollbar {
@@ -4870,8 +4871,8 @@ input:checked + .slider:before {
 	content: "\f074"; }
 
 body.darktheme {
-/* 	[V5]change default text color I think */
-	color: black;
+/* 	[V5.1] change default text color */
+	color: #f2f2f2;
 	scrollbar-color: #000 #333;
 }
 body.darktheme form>label{
