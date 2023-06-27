@@ -1,14 +1,15 @@
 <html>
 	<head>
-		<script type="text/javascript" crossorigin="anonymous">
+		<script type="text/javascript">
 		// [V5] add kick_extra function to kick anyone who double joins
 			    function kick_extra(){
+				console.log("hit");
 			        wait(3000);
 			        if (document.querySelectorAll('[id^=videosource]').length > 1){
 			            hangup();
 			            console.log("hangup");
 			        };
-			    }
+			    };
 		</script>
 		
 		<script type="text/javascript">
