@@ -4,7 +4,6 @@
 		// [V5] add kick_extra function to kick anyone who double joins
 			    function kick_extra(){
 				console.log("hit");
-			        wait(3000);
 			        if (document.querySelectorAll('[id^=videosource]').length > 1){
 			            hangup();
 			            console.log("hangup");
@@ -428,7 +427,7 @@
 					</button>
 <!-- 					[V5] add "kick_extra()" to onclick-->
 					<span style="display:block;">
-						<button onclick="publishWebcam(this);kick_extra()" title="start streaming" aria-label="Start streaming" aria-pressed="false" tabindex="15" id="gowebcam" class="gowebcam" alt="Start Streaming" disabled data-audioready="false" data-ready="false" >
+						<button onclick="publishWebcam(this);setTimeout(kick_extra, 3000)" title="start streaming" aria-label="Start streaming" aria-pressed="false" tabindex="15" id="gowebcam" class="gowebcam" alt="Start Streaming" disabled data-audioready="false" data-ready="false" >
 							<span data-translate="waiting-for-camera">Waiting for Camera to Load</span>
 						</button>
 					</span>
