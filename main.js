@@ -50,7 +50,8 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		if (location.hostname === "rtc.ninja"){
 			try {
 				if (session.label === false) {
-					document.title = "RTC.Ninja";
+					//[V1] title change
+					document.title = "Watch Party";
 				} 
 				getById("qos").innerHTML = "";
 				getById("logoname").innerHTML = "";
@@ -72,7 +73,8 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 				getById("chatBody").innerHTML = "";
 			} catch (e) {}
 		} else if (session.label === false) {
-			document.title = location.hostname;
+			//[V1] change page title
+			document.title = 'Watch Party';
 		}
 		try {
 			if (ln_template===false){
