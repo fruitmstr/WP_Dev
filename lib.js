@@ -17415,6 +17415,7 @@ async function enumerateDevices() {
 function requestOutputAudioStream() {
 	try {
 		//warnlog("GET USER MEDIA");
+		//[V1] I think this is where we get the devices for the list {J}
 		return navigator.mediaDevices.getUserMedia({
 			audio: true
 			, video: false
@@ -17493,6 +17494,7 @@ async function requestAudioStream() {
 					}
 					const option = document.createElement('option');
 					option.value = deviceInfo.deviceId;
+					//{J} [V1] this is where the device names are accessed
 					if (deviceInfo.kind === 'audioinput') {
 						option.text = deviceInfo.label || `Microphone ${audioInputSelect.length + 1}`;
 						audioInputSelect.appendChild(option);
@@ -17881,17 +17883,21 @@ function gotDevices(deviceInfos, miconly=false) {
 						getById("multiselect1").parentNode.style.display = "none";
 					} catch(e){}
 				} 
-				
+
+				//{J} I think this is where the audio devices are enumerated
 				option.value = deviceInfo.deviceId || "default";
 				option.name = "multiselect" + counter;
 				option.id = "multiselect" + counter;
 				option.label = deviceInfo.label;
+
+				//[V1] Debug to find where the device names are stored
+				console.log(option.label)
 				
 				label = document.createElement('label');
 				label.for = option.name;
 
 				label.innerHTML = " " + (deviceInfo.label || ("microphone " + ((audioInputSelect.length || 0) + 1)));
-
+				
 				listele.appendChild(option);
 				listele.appendChild(label);
 				audioInputSelect.appendChild(listele);
