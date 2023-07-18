@@ -4,9 +4,9 @@
 		<title>Watch Party</title>
 		<script type="text/javascript">
 		// [V5] add kick_extra function to kick anyone who double joins
-		// [V7] add an alert to prompt the user to go back to the 'vip' page to see other participants
+		// [V7] add an alert to prompt the user to go back to the 'vip' page to see other participants and unmute mic
 			    function kick_extra(){
-				alert("Return to the previous page to see other participants.")
+				alert("Unmute yourself if you plan on speaking, and return to the previous page to see other participants.")
 			        if (document.querySelectorAll('[id^=videosource]').length > 1){
 			            hangup();
 			            console.log("hangup");
