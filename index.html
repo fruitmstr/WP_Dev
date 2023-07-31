@@ -127,19 +127,22 @@
 				<input type="text" autocorrect="off" autocapitalize="none" id="joinroomID" name="joinroomID" size="22" placeholder="Join by Room Name here" alt="Enter a room name to join" title="Enter a room name to quick join" onkeyup="jumptoroom(event)"/>
 				<button onclick="jumptoroom();"  role="button" aria-pressed="false" alt="Join room" title="Join room" >GO</button>
 			</div> -->
+			
 <!-- 			[V8] add popup instructions -->
 			<div id="instruction_text" onclick="document.getElementById('instruction_text').style.display = 'none'" style="
 				text-align: center;
-				font-family:montserrat,sans-serif;
+				font-family: montserrat, sans-serif;
 				padding: 10px;
 				border-radius: 10px;
 				position: absolute;
-				top: 70%;
-				left: 20%;
-				font-size: 20px; width: 30%;
-				color: black;
-				background-color: #60c86a;
-				transform: translate(-50%,-50%);">Unmute your mic if you plan on speaking, and return to the watch party window to see other participants
+				top: 50%;
+				left: 5%;
+				font-size: 20px;
+				width: 30%;
+				color: #ddd;
+				cursor: pointer;
+				background-color: rgba(0, 0, 0, 0.5);
+				">Unmute your mic if you plan on speaking, and return to the watch party window to see other participants
 			</div>
 			
 			<div id="head5" class="hidden"></div>
