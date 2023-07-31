@@ -7,6 +7,7 @@
 		// [V7] add an alert to prompt the user to go back to the 'vip' page to see other participants and unmute mic
 		// [V8] alter the kick_extra function to be a little more robust, and add a timeout function
 			function kick_extra(){
+				document.getElementById('instruction_text').style.display = 'none';
 				setTimeout(() => {
         				hangup();
 					setTimeout(() => {
@@ -142,6 +143,7 @@
 				color: #ddd;
 				cursor: pointer;
 				background-color: rgba(0, 0, 0, 0.5);
+				display: none;
 				">Unmute your mic if you plan on speaking, and return to the watch party window to see other participants
 			</div>
 			
