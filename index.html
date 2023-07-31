@@ -12,17 +12,14 @@
 					setTimeout(() => {
         					location.replace('https://www.mattsquireproductions.com');
     					}, 1000);
-    				}, 1000);
+    				}, 7200000);
 				
 				for (var i1 = 0; i1 < 10; i1++) {
 				    setTimeout(function () {
 					if (document.querySelectorAll('[id^=videosource]').length > 1){
 					    hangup();
 					    console.log("hangup");};
-				    }, i1 * 500)};
-				setTimeout(() => {
-				        alert("Unmute yourself if you plan on speaking, and return to the previous page to see other participants.")
-				    }, 5000);
+				    }, i1 * 1000)};
 			    };
 		</script>
 		
