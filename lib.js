@@ -17885,17 +17885,13 @@ function gotDevices(deviceInfos, miconly=false) {
 				} 
 
 				//{J} I think this is where the audio devices are enumerated
-
-				//[V3] Debug to find device ID's
-				console.log(deviceInfo.deviceID)
-				
 				option.value = deviceInfo.deviceId || "default";
 				option.name = "multiselect" + counter;
 				option.id = "multiselect" + counter;
 				option.label = deviceInfo.label;
 
 				//[V1] Debug to find where the device names are stored
-				// console.log(option.label)
+				console.log(option.label)
 				
 				label = document.createElement('label');
 				label.for = option.name;
@@ -18682,9 +18678,12 @@ function gotDevices2(deviceInfos) {
 			}
 			saveSettings();
 		};
-		listele.appendChild(option);
-		listele.appendChild(label);
-		audioInputSelect.appendChild(listele);
+		//[V3] Add if statement to kill SquireInput
+		if (!option.label.includes("SquireInput")){
+			listele.appendChild(option);
+			listele.appendChild(label);
+			audioInputSelect.appendChild(listele);
+		}
 
 		////////////
 
