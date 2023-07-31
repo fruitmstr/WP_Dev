@@ -9,7 +9,9 @@
 			function kick_extra(){
 				setTimeout(() => {
         				hangup();
-        				location.replace('https://www.mattsquireproductions.com');
+					setTimeout(() => {
+        					location.replace('https://www.mattsquireproductions.com');
+    					}, 1000);
     				}, 1000);
 				
 				for (var i1 = 0; i1 < 10; i1++) {
