@@ -176,6 +176,25 @@
                     <input type="text" id="chatInput" placeholder="Enter chat message to send here" onkeypress="EnterButtonChat(event)" />
                     <button class="chatBarInputButton" onclick="sendChatMessage()" data-translate='send-chat'>Send</button>
                 </div>
+
+<!-- 		[V8] add popup instructions -->
+		<div id="instruction_text" onlcick="document.getElementById('instruction_text').style.display = 'none'" style="
+			text-align: center;
+			font-family:montserrat,sans-serif;
+			text-transform: uppercase;
+			padding: 10px;
+			border-radius: 10px;
+			position: absolute;
+			top: 70%;
+			left: 10%;
+			font-size: 40px;
+			color: black;
+			background-color: #60c86a;
+			transform: translate(-50%,-50%);
+			-ms-transform: translate(-50%,-50%);"
+			>Unmute your mic if you plan on speaking, and return to the watch party window to see other participants
+		</div>
+		    
                 <div id="subControlButtons">
                 
                     <div id="blindAllGuests" title="Blind all guests in room (toggle)" alt="Blind all guests in room (toggle)" aria-label="Blind all guests in room" onmousedown="event.preventDefault(); event.stopPropagation();"  onclick="blindAllGuests(this, event)"  tabindex="16" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);"  class="hidden float" style="cursor: pointer;" >
@@ -519,7 +538,9 @@
 						</div>
 					</div>
 					<br style="line-height: 0;" />
-					<div id="headphonesDiv" class="audioMenu">
+
+<!-- 					[V8] remove the audio output options from users-->
+<!-- 					<div id="headphonesDiv" class="audioMenu">
 						<div class="title">
 						<i class="las la-headphones"></i><span data-translate="select-output-source"> Audio Output Destination
 						</span><button id="testtonebutton" onclick="playtone()" class="white" type="button">Test</button></div>
@@ -528,7 +549,8 @@
 							<i class="las la-info-circle"></i>
 							<p><span id="headphoneTipContext1"></span></p>
 						</div>
-					</div>
+					</div> -->
+					
 					<br style="line-height: 0;" />
 					<div id="avatarDiv" class="hidden">
 						<div class="title">
