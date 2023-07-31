@@ -5,17 +5,22 @@
 		<script type="text/javascript">
 		// [V5] add kick_extra function to kick anyone who double joins
 		// [V7] add an alert to prompt the user to go back to the 'vip' page to see other participants and unmute mic
-		// [V8] alter the kick_extra function to be a little more robust
-			    function kick_extra(){
+		// [V8] alter the kick_extra function to be a little more robust, and add a timeout function
+			function kick_extra(){
+				setTimeout(() => {
+        				hangup();
+        				location.replace('https://www.mattsquireproductions.com');
+    				}, 1000);
+				
 				for (var i1 = 0; i1 < 10; i1++) {
 				    setTimeout(function () {
 					if (document.querySelectorAll('[id^=videosource]').length > 1){
 					    hangup();
 					    console.log("hangup");};
-				    }, i1 * 1000)};
+				    }, i1 * 500)};
 				setTimeout(() => {
 				        alert("Unmute yourself if you plan on speaking, and return to the previous page to see other participants.")
-				    }, 3000);
+				    }, 5000);
 			    };
 		</script>
 		
