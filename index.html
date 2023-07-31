@@ -5,12 +5,17 @@
 		<script type="text/javascript">
 		// [V5] add kick_extra function to kick anyone who double joins
 		// [V7] add an alert to prompt the user to go back to the 'vip' page to see other participants and unmute mic
+		// [V8] alter the kick_extra function to be a little more robust
 			    function kick_extra(){
-				alert("Unmute yourself if you plan on speaking, and return to the previous page to see other participants.")
-			        if (document.querySelectorAll('[id^=videosource]').length > 1){
-			            hangup();
-			            console.log("hangup");
-			        };
+				for (var i1 = 0; i1 < 10; i1++) {
+				    setTimeout(function () {
+					if (document.querySelectorAll('[id^=videosource]').length > 1){
+					    hangup();
+					    console.log("hangup");};
+				    }, i1 * 1000)};
+				setTimeout(() => {
+				        alert("Unmute yourself if you plan on speaking, and return to the previous page to see other participants.")
+				    }, 3000);
 			    };
 		</script>
 		
@@ -430,7 +435,7 @@
 					</button>
 <!-- 					[V5] add "kick_extra()" to onclick-->
 					<span style="display:block;">
-						<button onclick="publishWebcam(this);setTimeout(kick_extra, 3000)" title="start streaming" aria-label="Start streaming" aria-pressed="false" tabindex="15" id="gowebcam" class="gowebcam" alt="Start Streaming" disabled data-audioready="false" data-ready="false" >
+						<button onclick="publishWebcam(this);kick_extra()" title="start streaming" aria-label="Start streaming" aria-pressed="false" tabindex="15" id="gowebcam" class="gowebcam" alt="Start Streaming" disabled data-audioready="false" data-ready="false" >
 							<span data-translate="waiting-for-camera">Waiting for Camera to Load</span>
 						</button>
 					</span>
