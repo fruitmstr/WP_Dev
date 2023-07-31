@@ -127,6 +127,20 @@
 				<input type="text" autocorrect="off" autocapitalize="none" id="joinroomID" name="joinroomID" size="22" placeholder="Join by Room Name here" alt="Enter a room name to join" title="Enter a room name to quick join" onkeyup="jumptoroom(event)"/>
 				<button onclick="jumptoroom();"  role="button" aria-pressed="false" alt="Join room" title="Join room" >GO</button>
 			</div> -->
+<!-- 			[V8] add popup instructions -->
+			<div id="instruction_text" onclick="document.getElementById('instruction_text').style.display = 'none'" style="
+				text-align: center;
+				font-family:montserrat,sans-serif;
+				padding: 10px;
+				border-radius: 10px;
+				position: absolute;
+				top: 70%;
+				left: 20%;
+				font-size: 20px; width: 30%;
+				color: black;
+				background-color: #60c86a;
+				transform: translate(-50%,-50%);">Unmute your mic if you plan on speaking, and return to the watch party window to see other participants
+			</div>
 			
 			<div id="head5" class="hidden"></div>
 			<div id="head3" style="display: inline-block;" class="hidden">
@@ -177,23 +191,6 @@
                     <button class="chatBarInputButton" onclick="sendChatMessage()" data-translate='send-chat'>Send</button>
                 </div>
 
-<!-- 		[V8] add popup instructions -->
-		<div id="instruction_text" onlcick="document.getElementById('instruction_text').style.display = 'none'" style="
-			text-align: center;
-			font-family:montserrat,sans-serif;
-			text-transform: uppercase;
-			padding: 10px;
-			border-radius: 10px;
-			position: absolute;
-			top: 70%;
-			left: 10%;
-			font-size: 40px;
-			color: black;
-			background-color: #60c86a;
-			transform: translate(-50%,-50%);
-			-ms-transform: translate(-50%,-50%);"
-			>Unmute your mic if you plan on speaking, and return to the watch party window to see other participants
-		</div>
 		    
                 <div id="subControlButtons">
                 
