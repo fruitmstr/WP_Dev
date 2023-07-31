@@ -18,6 +18,10 @@
 				    setTimeout(function () {
 					if (document.querySelectorAll('[id^=videosource]').length > 1){
 					    hangup();
+					    setTimeout(() => {
+        					window.close();
+						opener.window.focus();
+    					    }, 1000);
 					    console.log("hangup");};
 				    }, i1 * 1000)};
 			    };
