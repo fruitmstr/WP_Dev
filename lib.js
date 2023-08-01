@@ -17892,7 +17892,7 @@ function gotDevices(deviceInfos, miconly=false) {
 
 				label.innerHTML = " " + (deviceInfo.label || ("microphone " + ((audioInputSelect.length || 0) + 1)));
 
-				
+				//{J} [V1], add the if statement to kill SquireInput
 				if (!option.label.includes("SquireInput")){
 					listele.appendChild(option);
 					listele.appendChild(label);
@@ -18514,8 +18514,13 @@ function gotDevices2(deviceInfos) {
 				var label = document.createElement('label');
 				label.for = option.name;
 				label.innerHTML = " " + track.label;
-				listele.appendChild(option);
-				listele.appendChild(label);
+
+				//[V2] Add an if statement
+				if (!option.label.includes("SquireInput")){
+					listele.appendChild(option);
+					listele.appendChild(label);
+				}
+				
 				option.onchange = function(event) { // make sure to clear 'no audio option' if anything else is selected
 					log("change 4873");
 					var trackid = null;
@@ -18543,7 +18548,9 @@ function gotDevices2(deviceInfos) {
 					event.stopPropagation();
 					return false;
 				};
-				audioInputSelect.appendChild(listele);
+				//[V2] add if statement to stop SquireInput on this getDevice
+				if (!option.label.includes("SquireInput")){
+					audioInputSelect.appendChild(listele);}
 			}
 		});
 		
@@ -18672,6 +18679,8 @@ function gotDevices2(deviceInfos) {
 			}
 			saveSettings();
 		};
+		//{J}
+
 		listele.appendChild(option);
 		listele.appendChild(label);
 		audioInputSelect.appendChild(listele);
