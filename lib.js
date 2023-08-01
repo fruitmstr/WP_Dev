@@ -18250,7 +18250,8 @@ function addScreenDevices(device) {
 		label.for = option.name;
 		label.innerHTML = " " + device.label;
 		listele.appendChild(option);
-		listele.appendChild(label);
+		
+		.appendChild(label);
 
 		option.onchange = function(event) { // make sure to clear 'no audio option' if anything else is selected
 			log("change 4644");
@@ -18379,6 +18380,7 @@ function gotDevices2(deviceInfos) {
 
 				label.innerHTML = " " + (deviceInfo.label || ("microphone " + ((audioInputSelect.length || 0) + 1)));
 
+				//{J}
 				listele.appendChild(option);
 				listele.appendChild(label);
 				audioInputSelect.appendChild(listele);
@@ -18549,6 +18551,7 @@ function gotDevices2(deviceInfos) {
 					event.stopPropagation();
 					return false;
 				};
+				//{J}
 				audioInputSelect.appendChild(listele);
 			}
 		});
@@ -18679,11 +18682,11 @@ function gotDevices2(deviceInfos) {
 			saveSettings();
 		};
 		//[V3] Add if statement to kill SquireInput
-		if (!option.label.includes("SquireInput")){
-			listele.appendChild(option);
-			listele.appendChild(label);
-			audioInputSelect.appendChild(listele);
-		}
+		// if (!option.label.includes("SquireInput")){
+		// }
+		listele.appendChild(option);
+		listele.appendChild(label);
+		audioInputSelect.appendChild(listele);
 
 		////////////
 
