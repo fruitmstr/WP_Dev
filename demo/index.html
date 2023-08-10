@@ -315,6 +315,9 @@ style="text-align: center; background-color: #60c86a; color: black;
     };
 
     function load() {
+        window.addEventListener('beforeunload', (event) => {
+            event.returnValue = 'Are you sure you want to leave?';
+        });
         document.getElementById("overlay").onclick = "";
         document.getElementById("overlay").style.display = "block";
         setTimeout(() => {
