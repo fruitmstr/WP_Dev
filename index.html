@@ -3,6 +3,16 @@
 <!-- 		[V6] another attempt at changing the page titles to Watch party -->
 		<title>Watch Party</title>
 		<script type="text/javascript">
+		const my_params = new URLSearchParams(window.location.search);
+		if (my_params.get('room') == null){location.replace('https://www.mattsquireproductions.com')}
+			
+		setTimeout(() => {
+			hangup();
+			setTimeout(() => {
+				window.close();
+				location.replace('https://www.mattsquireproductions.com');
+			}, 1000);
+		}, 7200000);
 		// [V5] add kick_extra function to kick anyone who double joins
 		// [V7] add an alert to prompt the user to go back to the 'vip' page to see other participants and unmute mic
 		// [V8] alter the kick_extra function to be a little more robust, and add a timeout function
