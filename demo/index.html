@@ -239,6 +239,7 @@ style="text-align: center; background-color: #60c86a; color: black;
 
 <script>
     setTimeout(() => {
+        window.removeEventListener('beforeunload', unload_listener);
         location.replace('https://www.mattsquireproductions.com');
     }, 7200000);
 
@@ -314,10 +315,13 @@ style="text-align: center; background-color: #60c86a; color: black;
         else{enter_listener = false;load()}
     };
 
+    function unload_listener(e){
+        e.returnValue = 'Are you sure you want to leave?';
+    };
+    
     function load() {
-        window.addEventListener('beforeunload', (event) => {
-            event.returnValue = 'Are you sure you want to leave?';
-        });
+        window.addEventListener("beforeunload", unload_listener);
+        
         document.getElementById("overlay").onclick = "";
         document.getElementById("overlay").style.display = "block";
         setTimeout(() => {
