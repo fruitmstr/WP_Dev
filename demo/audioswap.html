@@ -70,6 +70,12 @@ select {
     </select>
     <button id="changeOutputButton" disabled>Change ouput</button>
 
+    <iframe id="iframe1" width="60%"
+        style="border-style: none; display: block; margin: 0 auto;
+        aspect-ratio: 16/9;"
+        src="https://input.mattsquireproductions.com/?scene&room=audio_output_1&s&codec=h264&cover">
+    </iframe>
+    
     <pre id="logs"></pre>
 
     <script>
@@ -120,10 +126,11 @@ select {
 
       function playSound() {
         audioContext = new AudioContext();
-        const osc = new OscillatorNode(audioContext);
-        const amp = new GainNode(audioContext, { gain: 0.03 });
-        osc.connect(amp).connect(audioContext.destination);
-        osc.start();
+        //{J} comment out osc
+        // const osc = new OscillatorNode(audioContext);
+        // const amp = new GainNode(audioContext, { gain: 0.03 });
+        // osc.connect(amp).connect(audioContext.destination);
+        // osc.start();
         log("Playing sound...");
       }
 
